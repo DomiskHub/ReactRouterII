@@ -74,7 +74,8 @@ body {
   display: flex;
   align-items: center;
   background-color: #fff1e4;
-  border: 1px solid black;
+  border: 1px solid rgb(131, 131, 131);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card-body {
@@ -91,6 +92,10 @@ body {
 .card-img {
   width: 200px;
   height: 200px;
+  border: #d6d6d6 solid 1px;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .back {

@@ -17,7 +17,7 @@ function NavigationBar() {
               Home
             </NavLink>
             <NavLink className={({ isActive }) => (isActive ? "poke-nav" : undefined)} to="/pokemons">
-              Pokemons
+              Pokemones
             </NavLink>
           </Nav>
         </Container>

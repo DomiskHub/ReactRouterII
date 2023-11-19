@@ -34,7 +34,7 @@ const Pokemons = () => {
       <div className="select-sel">
         <h1>Selecciona un pokemon</h1>
         <Form.Select className="select-size" aria-label="Select a Pokémon" onChange={handleSelect} value={selectedPokemon}>
-          <option>Select a Pokémon</option>
+          <option>Selecciona un pokemon</option>
           {pokemons &&
             pokemons.map((pokemon) => (
               <option className="poke-select" key={pokemon.name} value={pokemon.name}>
