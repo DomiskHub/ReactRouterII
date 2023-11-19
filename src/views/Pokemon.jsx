@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Pokemon() {
   const [pokemon, setPokemon] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   const { name } = useParams();
   const { types, stats } = pokemon || {};
 
@@ -13,6 +14,9 @@ function Pokemon() {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
       const json = await res.json();
       setPokemon(json);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
     } catch (error) {
       console.log("error");
     }
@@ -21,7 +25,7 @@ function Pokemon() {
     getPokemon();
   }, []);
 
-  if (!pokemon) {
+  if ((!pokemon, isLoading)) {
     return (
       <div className="card-container">
         <div className="pokemon"></div>
